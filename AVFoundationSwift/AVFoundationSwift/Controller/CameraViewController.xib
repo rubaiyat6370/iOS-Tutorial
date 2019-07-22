@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController" customModule="AVFoundationSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="cameraButton" destination="2sp-4I-PQh" id="1Hp-zj-fCU"/>
+                <outlet property="cameraSelectionButton" destination="BRx-A2-9Rh" id="Oxx-Nv-soa"/>
+                <outlet property="galleryButton" destination="b00-iJ-L3I" id="Jkg-fz-sjd"/>
+                <outlet property="previewImageView" destination="nzD-PH-VeJ" id="pFf-XF-ufv"/>
+                <outlet property="toggleCameraButton" destination="5hP-Ur-4VR" id="JeR-9f-7fx"/>
+                <outlet property="toggleFlashButton" destination="CNV-5q-B7d" id="nyx-xT-iQz"/>
+                <outlet property="videoCameraButton" destination="UtF-Rv-1bV" id="z2C-WR-Vhk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nzD-PH-VeJ">
+                    <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sp-4I-PQh" customClass="CustomButton" customModule="AVFoundationSwift" customModuleProvider="target">
+                    <rect key="frame" x="137" y="498" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="didTapOnTakePhotoButton:" destination="-1" eventType="touchUpInside" id="ckn-S9-XSe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNV-5q-B7d">
+                    <rect key="frame" x="260" y="36" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="fgS-FX-jn9"/>
+                        <constraint firstAttribute="height" constant="44" id="tb9-rL-u2P"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="flash_off"/>
+                    <connections>
+                        <action selector="toggleFlash:" destination="-1" eventType="touchUpInside" id="4Qr-aV-xR7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hP-Ur-4VR">
+                    <rect key="frame" x="260" y="90" width="44" height="44"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="switch_camera"/>
+                    <connections>
+                        <action selector="toggleCamera:" destination="-1" eventType="touchUpInside" id="eqN-hi-yWT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRx-A2-9Rh">
+                    <rect key="frame" x="16" y="484" width="44" height="44"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="camera"/>
+                    <connections>
+                        <action selector="selectCameraMode:" destination="-1" eventType="touchUpInside" id="5To-at-uGa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtF-Rv-1bV">
+                    <rect key="frame" x="16" y="430" width="44" height="44"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="videocam"/>
+                    <connections>
+                        <action selector="selectVideoMode:" destination="-1" eventType="touchUpInside" id="C6y-N9-4gx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b00-iJ-L3I">
+                    <rect key="frame" x="260" y="484" width="44" height="44"/>
+                    <color key="tintColor" red="0.99830201730000001" green="1" blue="0.94439610760000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button" image="photo_icon"/>
+                    <connections>
+                        <action selector="gotoGallery:" destination="-1" eventType="touchUpInside" id="Th0-9A-pqn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BRx-A2-9Rh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="12c-4C-yMs"/>
+                <constraint firstItem="BRx-A2-9Rh" firstAttribute="top" secondItem="UtF-Rv-1bV" secondAttribute="bottom" constant="10" id="4Ok-dC-Ao0"/>
+                <constraint firstItem="UtF-Rv-1bV" firstAttribute="leading" secondItem="BRx-A2-9Rh" secondAttribute="leading" id="6EG-gR-ReH"/>
+                <constraint firstItem="nzD-PH-VeJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7xC-jp-wvH"/>
+                <constraint firstItem="nzD-PH-VeJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8Yd-xW-xcn"/>
+                <constraint firstItem="nzD-PH-VeJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="EcX-ln-94c"/>
+                <constraint firstItem="5hP-Ur-4VR" firstAttribute="width" secondItem="CNV-5q-B7d" secondAttribute="width" id="ErV-un-ClZ"/>
+                <constraint firstItem="5hP-Ur-4VR" firstAttribute="height" secondItem="CNV-5q-B7d" secondAttribute="height" id="KRh-zH-Ybg"/>
+                <constraint firstItem="5hP-Ur-4VR" firstAttribute="top" secondItem="CNV-5q-B7d" secondAttribute="bottom" constant="10" id="KXO-km-Gsk"/>
+                <constraint firstItem="nzD-PH-VeJ" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Kon-Ul-Yh5"/>
+                <constraint firstItem="BRx-A2-9Rh" firstAttribute="bottom" secondItem="2sp-4I-PQh" secondAttribute="bottom" id="NET-aV-JGj"/>
+                <constraint firstItem="2sp-4I-PQh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RmB-PB-SGr"/>
+                <constraint firstItem="BRx-A2-9Rh" firstAttribute="height" secondItem="5hP-Ur-4VR" secondAttribute="height" id="TIw-nd-5Uf"/>
+                <constraint firstItem="b00-iJ-L3I" firstAttribute="height" secondItem="BRx-A2-9Rh" secondAttribute="height" id="Tnf-2O-OSm"/>
+                <constraint firstItem="BRx-A2-9Rh" firstAttribute="width" secondItem="5hP-Ur-4VR" secondAttribute="width" id="U0h-AV-ono"/>
+                <constraint firstItem="b00-iJ-L3I" firstAttribute="trailing" secondItem="5hP-Ur-4VR" secondAttribute="trailing" id="V6A-v7-iGw"/>
+                <constraint firstItem="b00-iJ-L3I" firstAttribute="bottom" secondItem="BRx-A2-9Rh" secondAttribute="bottom" id="Ytj-Kz-qZY"/>
+                <constraint firstItem="5hP-Ur-4VR" firstAttribute="trailing" secondItem="CNV-5q-B7d" secondAttribute="trailing" id="avo-Ap-8vG"/>
+                <constraint firstItem="CNV-5q-B7d" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="b1i-cg-F7G"/>
+                <constraint firstItem="b00-iJ-L3I" firstAttribute="width" secondItem="BRx-A2-9Rh" secondAttribute="width" id="i8P-wW-EX9"/>
+                <constraint firstAttribute="bottom" secondItem="2sp-4I-PQh" secondAttribute="bottom" constant="40" id="lqq-Gf-RFI"/>
+                <constraint firstItem="UtF-Rv-1bV" firstAttribute="width" secondItem="BRx-A2-9Rh" secondAttribute="width" id="mWN-fH-w00"/>
+                <constraint firstItem="UtF-Rv-1bV" firstAttribute="height" secondItem="BRx-A2-9Rh" secondAttribute="height" id="mdO-1Q-crV"/>
+                <constraint firstAttribute="trailing" secondItem="CNV-5q-B7d" secondAttribute="trailing" constant="16" id="n4i-dE-ybN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nzD-PH-VeJ" secondAttribute="trailing" id="onF-Q2-3cw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="88.125" y="156.33802816901408"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera" width="96" height="96"/>
+        <image name="flash_off" width="96" height="96"/>
+        <image name="photo_icon" width="96" height="96"/>
+        <image name="switch_camera" width="96" height="96"/>
+        <image name="videocam" width="96" height="96"/>
+    </resources>
+</document>
